@@ -13,7 +13,6 @@ import java.io.Serializable;
  * @ClassName: TestBean
  * @Description: TODO
  * @author tangxh
- * @date 2017-3-17 下午11:15:03
  * 
  */
 public class TestBean implements Serializable {
