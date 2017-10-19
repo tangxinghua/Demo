@@ -1,0 +1,49 @@
+html, body {
+	margin: 0;
+	height: 100%;
+}
+.test-wrap {
+	width: 160px;
+	margin: 100px auto 0;
+	position: relative;
+	/* border: 2px solid black; */
+	cursor: pointer;
+	/* perspective: 250px; */
+}
+.test {
+	position: absolute;
+	height: 10px;
+	width: 10px;
+	/*background-image: url(../img/zoro.jpg);*/
+}
+
+.test-one {
+	height: 160px;
+	width: 160px;
+	position: absolute;
+	/* left: 250px; */
+	/* top: 150px; */
+	background-color: green;
+	transform: translate3d(30px,110px,0px) rotateX(45deg) rotateY(30deg) rotateZ(0deg);
+	background-image: url(../img/zoro.jpg);
+}
+.test-two {
+	height: 160px;
+	width: 160px;
+	position: absolute;
+	background-color: green;
+	transform: translate3d(-60px,100px,0px) rotateX(45deg) rotateY(45deg) rotateZ(0deg);
+	opacity: 0.7;
+	background-image: url(../img/zoro.jpg);
+}
+.test-third {
+	height: 160px;
+	width: 160px;
+	position: absolute;
+	/* left: 250px; */
+	/* top: 150px; */
+	background-color: green;
+	transform: translate3d(60px,100px,0px) rotateX(45deg) rotateY(-45deg);
+	opacity: 0.7;
+	background-image: url(../img/zoro.jpg);
+}

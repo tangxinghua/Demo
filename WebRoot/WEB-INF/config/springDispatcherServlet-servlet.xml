@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
+
+	<!-- HandlerMapping -->
+	<bean
+		class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" />
+
+	<!-- HandlerAdapter -->
+	<bean
+		class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter" />
+
+	<!-- ViewResolver -->
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.JstlView" />
+		<property name="prefix" value="/jsp/springmvc/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+	<!-- 方式二：配置地址转发器方式  - 映射URL地址 -->
+	<bean name="TestController" class="com.demo.test.springmvc.TestController" />  
+	<bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">  
+		<property name="mappings">  
+		    <props>  
+		        <prop key="/hello">TestController</prop>  
+		    </props>  
+		</property>  
+	</bean>
+	
+	<!-- 方式三：配置处理器方式 -->
+	<bean name="/test" class="com.demo.test.springmvc.TestController" />
+
+</beans>
